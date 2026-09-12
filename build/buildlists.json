@@ -1,0 +1,19 @@
+{
+    "version": [1, 0, 0],
+    "build": "FlareLinux Standard x86_64",
+    "buildfiles": [
+        {
+            "module": "initsystem",
+            "version": [1, 0, 0],
+            "sources": [
+                {
+                    "file": "initsystem/init.c",
+                    "language": "c",
+                    "comp-out": "executable",
+                    "output": "sbin/init",
+                    "buildstatic": true
+                }
+            ]
+        }
+    ]
+}
