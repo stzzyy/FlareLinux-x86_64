@@ -9,7 +9,7 @@ extern int draw_text(DirectDrawCanvas_t canvas, int x, int y, char *text, int te
 
 extern int draw_line(DirectDrawCanvas_t canvas, int x, int y, int length, int width, ColorComponent *color) {}
 
-extern int draw_bitmap(DirectDrawCanvas_t canvas, int x, int y, ImageBitmap *image, ColorComponent *color) {}
+extern int draw_bitmap(DirectDrawCanvas_t canvas, int x, int y, ImageBitmap *image) {}
 
 
 extern FontType * define_font(char *font_path, int size, int scalar) {}

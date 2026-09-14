@@ -2,6 +2,8 @@
 
 #include "libraries/include/direct_draw_graphics_headers.h"
 #include "libraries/libs/direct_draw_graphics.h"
+#include <unistd.h>
+#include <time.h>
 
 
 DirectDrawCanvas_t initiate_direct_draw_canvas(int width, int height) {
@@ -68,3 +70,10 @@ int draw_membuffer(DirectDrawCanvas_t canvas) {
 
 
 
+void wait_frame_gap(int fps) {
+    int milliseconds = (1/30) * 1000;
+    struct timespec ts;
+    ts.tv_sec = milliseconds / 1000;
+    ts.tv_nsec = (milliseconds % 1000) * 1000000;
+    nanosleep(&ts, NULL);
+}
